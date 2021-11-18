@@ -15,7 +15,7 @@ const ProductD = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        const url = `http://localhost:5000/products?email=${user.email}`
+        const url = `https://enigmatic-citadel-16277.herokuapp.com/products?email=${user.email}`
         fetch(url, {
             headers: {
                 'authorization': `Bearer ${token}`
@@ -28,7 +28,7 @@ const ProductD = () => {
             })
     }, [])
     const handleWithOrderCencel = (Id) =>{
-        const url = `http://localhost:5000/products/${Id}`;
+        const url = `https://enigmatic-citadel-16277.herokuapp.com/products/${Id}`;
         fetch(url, {
             method: 'DELETE'
         })

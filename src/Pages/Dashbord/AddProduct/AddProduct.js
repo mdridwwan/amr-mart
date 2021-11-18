@@ -24,7 +24,7 @@ const AddProduct = () => {
         setIsLoading(true)
         // send to the server
         console.log(product)
-        fetch('http://localhost:5000/productadd', {
+        fetch('https://enigmatic-citadel-16277.herokuapp.com/productadd', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

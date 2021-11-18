@@ -50,7 +50,7 @@ const BuyModal = ({ setBuySuccess, product, openProduct, setInsertId, handleProd
         }
         // send to the server
         console.log(product)
-        fetch('http://localhost:5000/products', {
+        fetch('https://enigmatic-citadel-16277.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

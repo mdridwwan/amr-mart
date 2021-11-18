@@ -14,7 +14,7 @@ const MakeAdmin = () => {
     const handleAdminSubit = e => {
         const user = { email };
 
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://enigmatic-citadel-16277.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,

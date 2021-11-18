@@ -25,7 +25,7 @@ const ReviewCount = () => {
     const handleBookingSubmit = e => {
         setIsLoading(true);
         console.log(rattingInfo)
-        fetch('http://localhost:5000/review', {
+        fetch('https://enigmatic-citadel-16277.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

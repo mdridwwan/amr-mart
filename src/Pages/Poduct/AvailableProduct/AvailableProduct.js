@@ -11,7 +11,7 @@ const AvailableProduct = () => {
    
 
     useEffect(() =>{
-        const url ='http://localhost:5000/prodcutAll'
+        const url ='https://enigmatic-citadel-16277.herokuapp.com/prodcutAll'
         fetch(url)
         .then(res => res.json())
             .then(data => {

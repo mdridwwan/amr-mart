@@ -12,7 +12,7 @@ import { Container } from 'react-bootstrap';
 const ReviewView = () => {
     const [reviews, setReview] = useState([]);
     useEffect(() => {
-        const url = 'http://localhost:5000/reviews'
+        const url = 'https://enigmatic-citadel-16277.herokuapp.com/reviews'
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -27,7 +27,7 @@ const ReviewView = () => {
             <Container>
                 <Grid container spacing={2}>
                     {
-                        reviews.map((review) => (
+                        reviews.slice(0,6).map((review) => (
                             <Grid key={review._id} item xs={12} sm={6} md={4}>
                                 <Card sx={{ minWidth: 275 }}>
                                     <CardContent>
