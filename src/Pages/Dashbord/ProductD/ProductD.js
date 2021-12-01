@@ -24,9 +24,12 @@ const ProductD = () => {
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
-                setIsLoading(false)
+                // setIsLoading(false)
             })
-    }, [])
+        setIsLoading(false)
+            //dipendence products 
+    }, [products])
+    
     const handleWithOrderCencel = (Id) =>{
         const url = `https://enigmatic-citadel-16277.herokuapp.com/products/${Id}`;
         fetch(url, {
@@ -35,11 +38,16 @@ const ProductD = () => {
         .then(res => res.json())
         .then(data => {
             if (data.deletedCount === 1) {
-                setDeleteProductSuccess(true)
+                 setDeleteProductSuccess(true)
+
+                 //Set product empty
+                //  setProducts([])
             }
+            // setDeleteProductSuccess(true)
         })
     }
-    console.log(products)
+    setTimeout(function () { setDeleteProductSuccess('') }, 3000);
+
     return (
         <div>
             <h2>Product Orders: {products.length}</h2>

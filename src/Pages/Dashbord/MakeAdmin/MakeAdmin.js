@@ -30,7 +30,7 @@ const MakeAdmin = () => {
                     setSuccess(true)
                 }
             })
-
+            
         e.preventDefault()
     }
     return (

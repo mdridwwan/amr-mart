@@ -40,7 +40,7 @@ const ReviewCount = () => {
                     setIsLoading(false);
                 }
             });
-
+            e.target.reset()
         e.preventDefault();
     }
         

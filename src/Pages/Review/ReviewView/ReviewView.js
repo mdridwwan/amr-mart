@@ -19,7 +19,7 @@ const ReviewView = () => {
                 setReview(data)
             
             })
-    }, [])
+    }, [reviews])
     console.log(reviews)
     return (
     <div>

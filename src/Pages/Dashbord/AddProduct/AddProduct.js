@@ -2,6 +2,7 @@ import { Alert, CircularProgress, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import { useHistory, useLocation } from 'react-router';
+import { ResetTv } from '@mui/icons-material';
 
 
 const AddProduct = () => {
@@ -19,11 +20,17 @@ const AddProduct = () => {
     }
     console.log(product)
 
+    
+    setTimeout(function () { setAddPRoductSuccess('') }, 3000);
+
+
+
+
     const handleProductSubmit = e => {
         setAddPRoductSuccess(false)
         setIsLoading(true)
         // send to the server
-        console.log(product)
+        // console.log(product)
         fetch('https://enigmatic-citadel-16277.herokuapp.com/productadd', {
             method: 'POST',
             headers: {
@@ -36,10 +43,10 @@ const AddProduct = () => {
                 if (data.insertedId){
                     setAddPRoductSuccess(true)
                     setIsLoading(false)
-                    setProduct(' ')
+                    // setProduct(' ')
                 }
             });
-      
+            e.target.reset()
          e.preventDefault();
         }
 
